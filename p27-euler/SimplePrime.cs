@@ -13,7 +13,7 @@ namespace p27_euler
             if (number == 2 || number == 3) return true;
             if (number % 2 == 0) return false;
 
-            for(ulong i = 3; i <= Convert.ToUInt64(Math.Sqrt(number)); i+=2)
+            for (ulong i = 3; i <= Convert.ToUInt64(Math.Sqrt(number)); i+=2)
             {
                 if (number % i == 0) return false;
             }

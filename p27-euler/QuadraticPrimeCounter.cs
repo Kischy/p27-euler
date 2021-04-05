@@ -6,9 +6,18 @@ namespace p27_euler
 {
     public class QuadraticPrimeCounter
     {
-        public ulong countConsecutivePrimes(int a, int b)
+        private SimplePrime sp = new SimplePrime();
+
+        public long countConsecutivePrimes(int a, int b)
         {
-            return 0;
+            long n = 0;
+
+            while(sp.isPrime(n * n + a * n + b))
+            {
+                n++;
+            }
+
+            return n;
         }
     }
 }
